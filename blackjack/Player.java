@@ -27,6 +27,10 @@ public class Player {
   //   return count;
   // }
 
+  public int cardCount() {
+    return hand.size();
+  }
+
   public void addCardToHand(Card card) {
     hand.add(card);
   }

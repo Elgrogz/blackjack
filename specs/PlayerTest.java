@@ -21,6 +21,17 @@ public class PlayerTest {
     assertEquals("Gregor", player.getName());
   }
 
+  @Test
+  public void canCountHand() {
+    assertEquals(0, player.cardCount());
+  }
+
+  @Test
+  public void canAddCardToHand() {
+    player.addCardToHand(card);
+    assertEquals(1, player.cardCount());
+  }
+
 
 
 }
