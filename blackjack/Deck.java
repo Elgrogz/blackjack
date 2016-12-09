@@ -35,9 +35,9 @@ public class Deck {
     Collections.shuffle(deck);
   }
 
-  public void dealCard(Player player) {
+  public void dealCard(Cardable person) {
       Card cardToDeal = deck.get(0);
-      player.addCardToHand(cardToDeal);
+      person.addCardToHand(cardToDeal);
       deck.remove(0);
   }
 }

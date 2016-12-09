@@ -3,33 +3,33 @@ import org.junit.*;
 
 import blackjack.*;
 
-public class PlayerTest {
+public class DealerTest {
 
   Deck deck;
   Card card;
-  Player player;
+  Dealer dealer;
 
   @Before
   public void before() {
     deck = new Deck();
     card = new Card(ValueType.JACK, SuitType.CLUBS);
-    player = new Player("Gregor");
+    dealer = new Dealer();
   }
 
   @Test 
   public void canGetName() {
-    assertEquals("Gregor", player.getName());
+    assertEquals("Dealer", dealer.getName());
   }
 
   @Test
   public void canCountHand() {
-    assertEquals(0, player.cardCount());
+    assertEquals(0, dealer.cardCount());
   }
 
   @Test
   public void canAddCardToHand() {
-    player.addCardToHand(card);
-    assertEquals(1, player.cardCount());
+    dealer.addCardToHand(card);
+    assertEquals(1, dealer.cardCount());
   }
 
 }

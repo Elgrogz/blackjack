@@ -1,7 +1,7 @@
 package blackjack;
 import java.util.*;
 
-public class Player {
+public class Player implements Cardable {
 
   String name;
   ArrayList<Card> hand;
