@@ -1,34 +1,34 @@
 package blackjack;
+import java.util.*;
 
 public class Player {
 
   String name;
-  Hand[] hand;
+  ArrayList<Card> hand;
 
   public Player(String name) {
     this.name = name;
-    this.hand = new Card[2];
+    this.hand = new ArrayList<Card>();
   } 
 
-  public void getName() {
+  public String getName() {
     return this.name;
   }
 
-  public void getHand() {
+  public ArrayList<Card> getHand() {
     return this.hand;
   }
 
-  public int cardCount() {
-    count = 0
-      for (Card card : hand) {
-        count++;
-      }
-    return count;
-  }
+  // public int cardCount() {
+  //   count = 0
+  //     for (Card card : hand) {
+  //       count++;
+  //     }
+  //   return count;
+  // }
 
-
-  public void addCardToHand() {
-    hand
+  public void addCardToHand(Card card) {
+    hand.add(card);
   }
 
 
