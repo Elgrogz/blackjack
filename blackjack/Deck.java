@@ -28,9 +28,16 @@ public class Deck {
         addCard(cardToAdd);
       }
     }
+    shuffle();
   }
 
   public void shuffle() {
     Collections.shuffle(deck);
+  }
+
+  public void dealCard(Player player) {
+      Card cardToDeal = deck.get(0);
+      player.addCardToHand(cardToDeal);
+      deck.remove(0);
   }
 }

@@ -7,12 +7,14 @@ public class DeckTest {
 
   Deck deck;
   Card card;
+  Player player;
 
   @Before
   public void before() {
     deck = new Deck();
     card = new Card(ValueType.JACK, SuitType.CLUBS);
-  }
+    player = new Player("Gregor");
+    }
 
   @Test 
   public void canGetDeckSize() {
@@ -39,5 +41,12 @@ public class DeckTest {
   //   Card card = cards[1];
   //   assertEquals(SuitType.HEARTS, card.getSuit());
   // }
+
+  @Test
+  public void canDealCardToPlayer() {
+    deck.buildDeck();
+    deck.dealCard(player);
+    assertEquals(1, player.cardCount());
+  }
 
 }
