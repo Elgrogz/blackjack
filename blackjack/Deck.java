@@ -19,11 +19,9 @@ public class Deck {
 
   public void buildDeck() {
     for ( SuitType suit: SuitType.values() ) {
-      System.out.println( "Looping through suits" + suit);
       for( ValueType value: ValueType.values()){
-        System.out.println( "Looping through values" + value);
-        // Card cardToAdd = new Card(value, suit);
-        // addCard(cardToAdd);
+        Card cardToAdd = new Card(value, suit);
+        addCard(cardToAdd);
       }
 
     }
