@@ -32,4 +32,12 @@ public class DeckTest {
     assertEquals(52, deck.getSize());
   }
 
+  // @Test
+  // public void firstCardIsHearts() {
+  //   deck.buildDeck();
+  //   ArrayList<Card> cards = deck.getDeck();
+  //   Card card = cards[1];
+  //   assertEquals(SuitType.HEARTS, card.getSuit());
+  // }
+
 }

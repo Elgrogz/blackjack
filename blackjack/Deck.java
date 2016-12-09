@@ -13,6 +13,10 @@ public class Deck {
     return this.deck.size();
   }
 
+  public ArrayList<Card> getDeck() {
+    return this.deck;
+  }
+
   public void addCard(Card card) {
     this.deck.add(card);
   }
@@ -23,11 +27,10 @@ public class Deck {
         Card cardToAdd = new Card(value, suit);
         addCard(cardToAdd);
       }
-
     }
+  }
 
-
-
-
+  public void shuffle() {
+    Collections.shuffle(deck);
   }
 }
