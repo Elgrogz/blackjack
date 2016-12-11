@@ -29,6 +29,9 @@ public class Runner {
       System.out.println(card.toString());
     }
 
+    System.out.println("Value of " + dealer.getName() + "'s Hand: " + dealer.getValueOfHand());
+    System.out.println("Value of " + player.getName() + "'s Hand: " + player.getValueOfHand());
+
   }
 
 }

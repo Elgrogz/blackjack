@@ -27,4 +27,8 @@ public class Player implements Cardable {
     hand.addCard(card);
   }
 
+  public int getValueOfHand() {
+    return hand.getTotalValue();
+  }
+
 }

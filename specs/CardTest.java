@@ -9,7 +9,7 @@ public class CardTest {
 
   @Before 
   public void before() {
-    card = new Card(ValueType.JACK, SuitType.CLUBS);
+    card = new Card(ValueType.JACK, SuitType.CLUBS, 10);
   }
 
   @Test 
@@ -20,6 +20,11 @@ public class CardTest {
   @Test 
   public void canGetSuit() {
     assertEquals(SuitType.CLUBS, card.getSuit());
+  }
+
+  @Test
+  public void canGetNumberOfCard() {
+    assertEquals(10, card.getNumber());
   }
 
 }

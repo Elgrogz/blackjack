@@ -13,7 +13,7 @@ public class DeckTest {
   @Before
   public void before() {
     deck = new Deck();
-    card = new Card(ValueType.JACK, SuitType.CLUBS);
+    card = new Card(ValueType.JACK, SuitType.CLUBS, 10);
     player = new Player("Gregor", new Hand());
     dealer = new Dealer(new Hand());
     }
@@ -57,5 +57,15 @@ public class DeckTest {
     deck.dealCard(dealer);
     assertEquals(1, dealer.getSize());
   }
+
+
+  // @Test
+  // public void canGetNumberOfCard() {
+  //   deck.buildDeck();
+  //   Card cardToCheckOne = deck.get(5);
+  //   Card cardToCheckTwo = deck.get(12);
+  //   assertEquals(5, cardToCheckOne.getNumber());
+  //   assertEquals(10, cardToCheckTwo.getNumber());
+  // }
 
 }

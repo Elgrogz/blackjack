@@ -25,5 +25,13 @@ public class Hand {
     return count;
   }
 
+  public int getTotalValue() {
+    int value = 0;
+      for (Card card : hand) {
+        int numberToAdd = card.getNumber();
+        value += numberToAdd;
+      }
+    return value;
+  }
 
 }

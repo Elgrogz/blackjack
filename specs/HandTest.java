@@ -11,7 +11,7 @@ public class HandTest {
   @Before
   public void before() {
     hand = new Hand();
-    card = new Card(ValueType.JACK, SuitType.CLUBS);
+    card = new Card(ValueType.JACK, SuitType.CLUBS, 10);
   }
 
   @Test

@@ -1,12 +1,17 @@
 package blackjack;
 
-// public class Game {
+public class Game {
 
 //   Dealer dealer;
+//   ArrayList<Player> players;
+//   Deck deck;
 
-//   public Game(Dealer dealer, Deck deck) {
-//     this.dealer = dealer;
+//   public Game(Deck deck, ArrayList<Player> players) {
+//     this.dealer = new Dealer();
+//     this.players = players;
 //     this.deck = deck;
 //   }
 
-// }
+  
+
+}

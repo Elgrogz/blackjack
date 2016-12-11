@@ -27,6 +27,10 @@ public class Dealer implements Cardable {
     hand.addCard(card);
   }
 
+  public int getValueOfHand() {
+    return hand.getTotalValue();
+  }
+
 
 
 }

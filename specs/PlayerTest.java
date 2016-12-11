@@ -12,7 +12,7 @@ public class PlayerTest {
   @Before
   public void before() {
     deck = new Deck();
-    card = new Card(ValueType.JACK, SuitType.CLUBS);
+    card = new Card(ValueType.JACK, SuitType.CLUBS, 10);
     player = new Player("Gregor", new Hand());
   }
 

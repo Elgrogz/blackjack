@@ -24,7 +24,11 @@ public class Deck {
   public void buildDeck() {
     for ( SuitType suit: SuitType.values() ) {
       for( ValueType value: ValueType.values()){
-        Card cardToAdd = new Card(value, suit);
+        int number = value.ordinal() + 1;
+          if (number > 10) {
+            number = 10;
+          }
+        Card cardToAdd = new Card(value, suit, number);
         addCard(cardToAdd);
       }
     }

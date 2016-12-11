@@ -4,10 +4,12 @@ public class Card {
 
   ValueType value;
   SuitType suit;
+  int number;
 
-  public Card(ValueType value, SuitType suit) {
+  public Card(ValueType value, SuitType suit, int number) {
     this.value = value;
     this.suit = suit;
+    this.number = number;
   }
 
   public ValueType getValue() {
@@ -16,6 +18,10 @@ public class Card {
 
   public SuitType getSuit() {
     return this.suit;
+  }
+
+  public int getNumber() {
+    return this.number;
   }
 
   @Override

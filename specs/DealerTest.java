@@ -12,7 +12,7 @@ public class DealerTest {
   @Before
   public void before() {
     deck = new Deck();
-    card = new Card(ValueType.JACK, SuitType.CLUBS);
+    card = new Card(ValueType.JACK, SuitType.CLUBS, 10);
     dealer = new Dealer(new Hand());
   }
 
