@@ -23,5 +23,12 @@ public class GameTest {
     assertEquals(3, game.players.length);
   }
 
+  @Test
+  public void playerHasTwoCards() {
+    game.dealFirstTwoCards();
+    Cardable player = game.players[2];
+    assertEquals(2, player.getSize());
+  }
+
 
 }
