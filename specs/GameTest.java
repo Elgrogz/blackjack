@@ -25,6 +25,7 @@ public class GameTest {
   @Test
   public void playerHasTwoCards() {
     game.dealFirstTwoCards();
+    game.checkWinner();
     Cardable player = game.players[1];
     assertEquals(2, player.getSize());
   }

@@ -20,6 +20,16 @@ public class Game {
     }
   }
 
+  public void checkWinner() {
+    Cardable winner = players[0];
+    for (int i = 1; i < players.length; i++) {
+      if (players[i].getValueOfHand() > winner.getValueOfHand()) {
+        winner = players[i];
+      }
+    }
+    System.out.println(winner.getName() + " is the winner!");
+  }
+
   public void play() {
 
   }
