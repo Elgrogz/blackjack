@@ -13,10 +13,10 @@ public class Game {
 
   public void dealFirstTwoCards() {
 
-    for (Cardable  person : players) {
-      deck.dealCard(person);
-      deck.dealCard(person);
-      
+    for (Cardable  player : players) {
+      deck.dealCard(player);
+      deck.dealCard(player);
+      System.out.println(player.getName() + "'s hand total: " + player.getValueOfHand());
     }
   }
 

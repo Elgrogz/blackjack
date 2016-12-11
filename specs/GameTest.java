@@ -13,20 +13,19 @@ public class GameTest {
   public void before() {
     Dealer dealer = new Dealer(new Hand());
     Player player1 = new Player("Gregor", new Hand());
-    Player player2 = new Player("Jimmy Jojo", new Hand());
-    Cardable[] players = {dealer, player1, player2};
+    Cardable[] players = {dealer, player1};
     game = new Game(players);
   }
 
   @Test
   public void canAddPlayersToArray() {
-    assertEquals(3, game.players.length);
+    assertEquals(2, game.players.length);
   }
 
   @Test
   public void playerHasTwoCards() {
     game.dealFirstTwoCards();
-    Cardable player = game.players[2];
+    Cardable player = game.players[1];
     assertEquals(2, player.getSize());
   }
 
