@@ -25,13 +25,19 @@ public class Game {
     for (int i = 1; i < players.length; i++) {
       if (players[i].getValueOfHand() > winner.getValueOfHand()) {
         winner = players[i];
+        System.out.println(winner.getName() + " is the winner!");
+      }
+      else if (players[i].getValueOfHand() == winner.getValueOfHand()) {
+        System.out.println(winner.getName() + " and " + players[1].getName() + " have tied! " + winner.getName() + " wins by default!");
       }
     }
-    System.out.println(winner.getName() + " is the winner!");
   }
+  
 
   public void play() {
-
+    deck.shuffle();
+    dealFirstTwoCards();
+    checkWinner();
   }
 
 }
