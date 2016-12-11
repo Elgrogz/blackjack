@@ -32,7 +32,6 @@ public class Deck {
         addCard(cardToAdd);
       }
     }
-    shuffle();
   }
 
   public void shuffle() {
