@@ -15,8 +15,8 @@ public class Player implements Cardable {
     return this.name;
   }
 
-  public Hand getHand() {
-    return this.hand;
+  public ArrayList<Card> getPlayerHand() {
+    return this.hand.getHand();
   }
 
   public int getSize() {

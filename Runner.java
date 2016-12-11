@@ -14,18 +14,20 @@ public class Runner {
         System.out.println(card.toString());
       }
 
+    System.out.println();
+
     deck.dealCard(dealer);
     deck.dealCard(player);
     deck.dealCard(dealer);
     deck.dealCard(player);
 
-    // for (Card card : dealer.getHand()) {
-    //   System.out.println(card.toString());
-    // }
+    for (Card card : dealer.getPlayerHand()) {
+      System.out.println(card.toString());
+    }
 
-    // for (Card card : player.getHand()) {
-    //   System.out.println(card.toString());
-    // }
+    for (Card card : player.getPlayerHand()) {
+      System.out.println(card.toString());
+    }
 
   }
 

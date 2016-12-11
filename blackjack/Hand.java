@@ -9,6 +9,10 @@ public class Hand {
     this.hand = new ArrayList<Card>();
   }
 
+  public ArrayList<Card> getHand() {
+    return this.hand;
+  }
+
   public void addCard(Card card) {
     hand.add(card);
   }
