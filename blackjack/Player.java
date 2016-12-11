@@ -4,36 +4,27 @@ import java.util.*;
 public class Player implements Cardable {
 
   String name;
-  ArrayList<Card> hand;
+  Hand hand;
 
-  public Player(String name) {
+  public Player(String name, Hand hand) {
     this.name = name;
-    this.hand = new ArrayList<Card>();
+    this.hand = hand;
   } 
 
   public String getName() {
     return this.name;
   }
 
-  public ArrayList<Card> getHand() {
+  public Hand getHand() {
     return this.hand;
   }
 
-  // public int cardCount() {
-  //   count = 0
-  //     for (Card card : hand) {
-  //       count++;
-  //     }
-  //   return count;
-  // }
-
-  public int cardCount() {
-    return hand.size();
-  }
+  public int getSize() {
+      return this.hand.cardCount();
+    }
 
   public void addCardToHand(Card card) {
-    hand.add(card);
+    hand.addCard(card);
   }
-
 
 }

@@ -13,7 +13,7 @@ public class PlayerTest {
   public void before() {
     deck = new Deck();
     card = new Card(ValueType.JACK, SuitType.CLUBS);
-    player = new Player("Gregor");
+    player = new Player("Gregor", new Hand());
   }
 
   @Test 
@@ -22,14 +22,9 @@ public class PlayerTest {
   }
 
   @Test
-  public void canCountHand() {
-    assertEquals(0, player.cardCount());
-  }
-
-  @Test
   public void canAddCardToHand() {
     player.addCardToHand(card);
-    assertEquals(1, player.cardCount());
+    assertEquals(1, player.getSize());
   }
 
 }

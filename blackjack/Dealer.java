@@ -4,27 +4,29 @@ import java.util.*;
 public class Dealer implements Cardable {
 
   String name;
-  ArrayList<Card> hand;
+  Hand hand;
 
-  public Dealer() {
+  public Dealer(Hand hand) {
     this.name = "Dealer";
-    this.hand = new ArrayList<Card>();
+    this.hand = hand;
   }
 
   public String getName() {
     return this.name;
   }
 
-  public ArrayList<Card> getHand() {
+  public Hand getHand() {
     return this.hand;
   }
 
-  public int cardCount() {
-    return hand.size();
+  public int getSize() {
+    return this.hand.cardCount();
   }
 
   public void addCardToHand(Card card) {
-    hand.add(card);
+    hand.addCard(card);
   }
+
+
 
 }

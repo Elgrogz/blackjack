@@ -7,25 +7,25 @@ public class Runner {
     
     Deck deck = new Deck();
     deck.buildDeck();
-    Dealer dealer = new Dealer();
-    Player player = new Player("Gregor");
+    Dealer dealer = new Dealer(new Hand());
+    Player player = new Player("Gregor", new Hand());
 
-    // for (Card card : deck.getDeck()) {
+      for (Card card : deck.getDeck()) {
+        System.out.println(card.toString());
+      }
+
+    deck.dealCard(dealer);
+    deck.dealCard(player);
+    deck.dealCard(dealer);
+    deck.dealCard(player);
+
+    // for (Card card : dealer.getHand()) {
     //   System.out.println(card.toString());
     // }
 
-    deck.dealCard(dealer);
-    deck.dealCard(player);
-    deck.dealCard(dealer);
-    deck.dealCard(player);
-
-    for (Card card : dealer.getHand()) {
-      System.out.println(card.toString());
-    }
-
-    for (Card card : player.getHand()) {
-      System.out.println(card.toString());
-    }
+    // for (Card card : player.getHand()) {
+    //   System.out.println(card.toString());
+    // }
 
   }
 

@@ -14,8 +14,8 @@ public class DeckTest {
   public void before() {
     deck = new Deck();
     card = new Card(ValueType.JACK, SuitType.CLUBS);
-    player = new Player("Gregor");
-    dealer = new Dealer();
+    player = new Player("Gregor", new Hand());
+    dealer = new Dealer(new Hand());
     }
 
   @Test 
@@ -48,14 +48,14 @@ public class DeckTest {
   public void canDealCardToPlayer() {
     deck.buildDeck();
     deck.dealCard(player);
-    assertEquals(1, player.cardCount());
+    assertEquals(1, player.getSize());
   } 
 
   @Test
   public void canDealCardToDealer() {
     deck.buildDeck();
     deck.dealCard(dealer);
-    assertEquals(1, dealer.cardCount());
+    assertEquals(1, dealer.getSize());
   }
 
 }
