@@ -1,9 +1,32 @@
-package blackjack;
+import blackjack.*;
+import java.util.*;
 
-class Runner {
+public class Runner {
 
-  public static void main(Strings[] args) {
+  public static void main(String[] args) {
     
+    Deck deck = new Deck();
+    deck.buildDeck();
+    Dealer dealer = new Dealer();
+    Player player = new Player("Gregor");
+
+    // for (Card card : deck.getDeck()) {
+    //   System.out.println(card.toString());
+    // }
+
+    deck.dealCard(dealer);
+    deck.dealCard(player);
+    deck.dealCard(dealer);
+    deck.dealCard(player);
+
+    for (Card card : dealer.getHand()) {
+      System.out.println(card.toString());
+    }
+
+    for (Card card : player.getHand()) {
+      System.out.println(card.toString());
+    }
+
   }
 
 }
