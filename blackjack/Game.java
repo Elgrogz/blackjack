@@ -2,17 +2,19 @@ package blackjack;
 
 public class Game {
 
-  Dealer dealer;
-  public Player[] players;
+  public Cardable[] players;
   Deck deck;
 
-  public Game(Player[] players) {
-    this.dealer = new Dealer(new Hand());
+  public Game(Cardable[] players) {
     this.players = players;
     this.deck = new Deck();
   }
 
-  
+  // public void dealCards() {
+  //   deck.buildDeck();
+
+  //   for (Cardable  person : players)
+  // }
 
   public void play() {
 
